@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<!-- ======= Head ======= -->
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Donne moi un mot de passe</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap"
+          rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/css/aos.css" rel="stylesheet">
+    <link href="assets/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/css/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Variables CSS Files. Uncomment your preferred color scheme -->
+    <!--<link href="assets/css/variables.css" rel="stylesheet">-->
+    <!-- <link href="assets/css/variables-blue.css" rel="stylesheet"> -->
+    <!-- <link href="assets/css/variables-green.css" rel="stylesheet"> -->
+    <link href="assets/css/variables-orange.css" rel="stylesheet">
+    <!--<link href="assets/css/variables-purple.css" rel="stylesheet"> -->
+    <!-- <link href="assets/css/variables-red.css" rel="stylesheet"> -->
+    <!-- <<link href="assets/css/variables-pink.css" rel="stylesheet"> -->
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/dmumdp.css" rel="stylesheet">
+</head>
+
+<body on>
+
+<!-- ======= Header ======= -->
+<header id="header" class="header fixed-top" data-scrollto-offset="0">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
+            <img src="assets/img/logo_bcisoft.png" alt="logo_bci_soft">
+        </a>
+    </div>
+</header>
+
+<section id="hero-static" class="hero-static d-flex align-items-center">
+    <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative"
+         data-aos="zoom-out">
+        <h2>DONNE MOI UN <span><span></span>MOT DE PASSE</span></h2>
+        <h3>Des mots de passe fiables pour tous vos accès</h3>
+        <p>Créez vos mots de passe fiables et sécurisés avec ce générateur de mot de passe en ligne.</p>
+        <div class="container">
+            <div class="dmumdp-row">
+                <div class="col">
+                    <fieldset>
+                        <div class="well options-box">
+                            <div class="d-flex flex-column">
+                                <div class="form-check d-flex my-1">
+                                    <input class="form-check-input" type="checkbox" value="" id="with_numeric" checked>
+                                    <label class="form-check-label ms-2" for="with_numeric">
+                                        Ajouter des chiffres au mot de passe: 0123456789
+                                    </label>
+                                </div>
+                                <div class="form-check d-flex my-1">
+                                    <input class="form-check-input" type="checkbox" value="" id="with_uppercase" checked>
+                                    <label class="form-check-label ms-2" for="with_uppercase">
+                                        Ajouter des majuscules au mot de passe : ABCDEF...XYZ
+                                    </label>
+                                </div>
+                                <div class="form-check d-flex my-1">
+                                    <input class="form-check-input" type="checkbox" value="" id="with_lowercase" checked>
+                                    <label class="form-check-label ms-2" for="with_lowercase">
+                                        Ajouter des minuscules au mot de passe : abcdef...xyz
+                                    </label>
+                                </div>
+                                <div class="form-check d-flex my-1">
+                                    <input class="form-check-input" type="checkbox" value="" id="with_special_characters">
+                                    <label class="form-check-label ms-2" for="with_special_characters">
+                                        Ajouter des caractères speciaux au mot de passe : !@$%^&()_-=+,|~
+                                    </label>
+                                </div>
+                                <div class="form-check d-flex my-1">
+                                    <input class="form-check-input" type="checkbox" value="" id="without_similar_characters" checked>
+                                    <label class="form-check-label ms-2" for="without_similar_characters">
+                                        Ne pas ajouter les caractères similaires tels que i, l, I, 1, O, o, 0 au mot de passe
+                                    </label>
+                                </div>
+                                <div class="form-check d-flex my-1">
+                                    <input class="form-check-input" type="checkbox" value="" id="qwerty_compliance" checked>
+                                    <label class="form-check-label ms-2" for="qwerty_compliance">
+                                        Compatible claviers QWERTY et AZERTY
+                                    </label>
+                                </div>
+                                <div class="d-flex align-items-center my-1">
+                                    <select name="pass_length" id="pass_length">
+                                        <option value="8"> 8 </option>
+                                        <option value="9"> 9 </option>
+                                        <option value="10"> 10 </option>
+                                        <option value="11"> 11 </option>
+                                        <option value="12"> 12 </option>
+                                        <option value="13"> 13 </option>
+                                        <option value="14"> 14 </option>
+                                        <option value="15"> 15 </option>
+                                        <option value="16" selected=""> 16 </option>
+                                        <option value="17"> 17 </option>
+                                        <option value="18"> 18 </option>
+                                        <option value="19"> 19 </option>
+                                        <option value="20"> 20 </option>
+                                        <option value="22"> 22 </option>
+                                        <option value="25"> 25 </option>
+                                        <option value="30"> 30 </option>
+                                    </select>
+                                    <label for="pass_length" class="form-label ms-2 mb-0">Combien de caractères dans le mot de passe?</label>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="dd-flex align-items-center justify-content-center btn-get-started creator"
+                                id="generate">Générer un mot de passe
+                        </button>
+                    </fieldset>
+
+                    <fieldset>
+                        <div class="well options-box">
+                            <div class="col-12">
+                                <div class="input-group">
+                                    <input id="password" type="text" class="form-control" readonly>
+                                    <span class="input-group-btn">
+                                        <button id="cpy-password" class="btn cpy" type="button"> Copier </button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ======= FAQ Section ======= -->
+<section class="faq pt-0">
+    <div class="container d-flex flex-column position-relative aos-init aos-animate" data-aos="fade-up">
+        <div class="section-about">
+            <h2>FAQ</h2>
+        </div>
+
+        <div class="row row-about">
+            <div class="col-12">
+                <ul>
+                    <li>Ce site permet la création de mots de passe totalement aléatoire, afin d'obtenir des mots de
+                        passe compliqués pour une garantie que personne ne puisse le trouver
+                    </li>
+                    <li>Le mot de passe est généré de façon aléatoire selon les critères que vous selectionnez</li>
+                    <li><strong>Conseil:</strong> un bon mot de passe contient majuscules, minuscules, chiffres, et
+                        au moins 10 caractères
+                    </li>
+                    <li>Aucune donnée personnelle enregistrée sur ce site</li>
+                    <li>Le mot de passe généré n'est pas enregistré</li>
+                </ul>
+            </div>
+            <!-- Tab Content -->
+        </div>
+    </div>
+
+</section><!-- End About Section -->
+
+<!-- ======= Footer ======= -->
+<footer id="footer" class="footer">
+    <div class="footer-legal text-center">
+        <div class="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center">
+            <div class="d-flex flex-column align-items-center align-items-lg-start">
+                <div class="credits">
+                    Designed by <a href="https://www.bcisoft.fr/">BCI SOFT</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer><!-- End Footer -->
+
+<a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<div id="preloader"></div>
+
+<!-- Vendor JS Files -->
+<script src="assets/js/jquery-3.6.0.min.js"></script>
+<!-- Get seedrandom.min.js from https://github.com/davidbau/seedrandom -->
+<script src="assets/js/seedrandom.min.js"></script>
+<script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="assets/js/aos.js"></script>
+<script src="assets/js/glightbox.min.js"></script>
+<script src="assets/js/swiper-bundle.min.js"></script>
+<!-- Template Main JS File -->
+<script src="assets/js/main.js"></script>
+
+<!--====== Scripts ====== -->
+<script src="assets/js/dmumdp.js"></script>
+
+
+</body>
+
+</html>
