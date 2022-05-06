@@ -172,3 +172,13 @@ section#about{
     padding-right: 15px;
     text-align: justify;
 }
+
+.copied {
+    padding: 5px;
+    text-align: center;
+    color: green;
+}
+
+input[type=text] {
+    font-family: JetBrains Mono, system-ui;
+}

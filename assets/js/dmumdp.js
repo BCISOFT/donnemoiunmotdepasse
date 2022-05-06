@@ -73,13 +73,19 @@ $(document).ready(() => {
 
     $("#qwerty_compliance").change(() => {
         if ($("#qwerty_compliance").prop("checked") === true) {
+            $("#with_numeric, #with_uppercase, #with_lowercase, #with_special_characters").prop( "disabled", true );
             $("#with_special_characters").prop( "checked", false );
+            $("#with_numeric, #with_uppercase, #with_lowercase").prop( "checked", true );
+        } else {
+            $("#with_numeric, #with_uppercase, #with_lowercase, #with_special_characters").prop( "disabled", false );
         }
     });
 
     $("#with_special_characters").change(() => {
         if ($("#with_special_characters").prop("checked") === true) {
-            $("#qwerty_compliance").prop( "checked", false );
+            $("#qwerty_compliance").prop( "disabled", true ).prop( "checked", false );
+        } else {
+            $("#qwerty_compliance").prop( "disabled", false );
         }
     });
 
@@ -89,5 +95,6 @@ $(document).ready(() => {
 
     $("#cpy-password").click(() => {
         copyToClipboard($("#password").val());
+        $('#password-copied').show().fadeOut(5000);
     });
 });
