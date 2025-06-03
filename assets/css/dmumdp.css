@@ -99,6 +99,35 @@ h3{
         flex-direction: column;
         align-items: flex-start;
     }
+
+    .input-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .input-group-btn {
+        display: flex;
+        gap: 10px;
+        width: 100%;
+    }
+
+    #password {
+        border-radius: 4px;
+        width: 100%;
+    }
+
+    .btn.generate,
+    .btn.cpy {
+        flex: 1;
+        border-radius: 4px;
+        text-align: center;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .btn.generate {
+        margin-right: 0;
+    }
 }
 .container{
     max-width: 780px;
@@ -356,10 +385,37 @@ select[class*="span"]{
 #cpy-link:hover{
     color:#b6b6b6;
 }
-.cpy{
+.cpy {
     background-color: #f97233;
     color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    padding: 8px 16px;
+    height: 100%;
+    white-space: nowrap;
+    font-weight: 500;
 }
+
+.cpy:hover {
+    background-color: #e05e1f;
+    color: white;
+}
+
+.btn.cpy {
+    background-color: #f97233;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: 500;
+}
+
+.btn.cpy:hover {
+    background-color: #e05e1f;
+    color: white;
+}
+
 section#about{
     padding-top: 0;
 }
@@ -421,20 +477,6 @@ input[type=text] {
     align-items: stretch;
 }
 
-.cpy {
-    background-color: #f97233;
-    color: white;
-    border: none;
-    border-radius: 0 4px 4px 0;
-    padding: 8px 16px;
-    height: 100%;
-    white-space: nowrap;
-}
-
-.cpy:hover {
-    background-color: #e05e1f;
-}
-
 .switch-btn {
     position: relative;
     width: 3.5em;
@@ -492,4 +534,19 @@ input[type=text] {
 .footer-legal .credits {
     text-align: center;
     margin: 0;
+}
+
+.btn.generate {
+    background-color: #f97233;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-right: 5px;
+    border-radius: 0;
+}
+
+.btn.generate:hover {
+    background-color: #e05e1f;
 }

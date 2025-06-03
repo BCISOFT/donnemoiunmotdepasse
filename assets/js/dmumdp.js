@@ -204,4 +204,9 @@ $(document).ready(() => {
         copyToClipboard($("#password").attr("data-password"));
         $('#password-copied').show().fadeOut(5000);
     });
+
+    // Gestionnaire pour le bouton de génération
+    document.getElementById('generate-password').addEventListener('click', function() {
+        generate();
+    });
 });
