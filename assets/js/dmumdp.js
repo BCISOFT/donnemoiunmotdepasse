@@ -28,15 +28,34 @@ function generate() {
     const passLength = $("#pass_length").val();
 
     const maps = getMaps();
-    let map = "";
-    if (withNumeric) map += maps['numeric'];
-    if (withUppercase) map += maps['uppercase'];
-    if (withLowercase) map += maps['lowercase'];
-    if (withSpecialCharacters) map += maps['specialCharacters'];
-    if (qwertyCompliance) map = maps['qwertyCompliance'];
+
+    // Créer des maps filtrées si withoutSimilarCharacters est activé
+    let numericMap = maps['numeric'];
+    let uppercaseMap = maps['uppercase'];
+    let lowercaseMap = maps['lowercase'];
+    let specialMap = maps['specialCharacters'];
+
     if (withoutSimilarCharacters) {
-        for (var i = 0; i < maps['similarCharacters'].length; i++) {
-            map = map.replace(maps['similarCharacters'].charAt(i), '');
+        for (let i = 0; i < maps['similarCharacters'].length; i++) {
+            const similarChar = maps['similarCharacters'].charAt(i);
+            numericMap = numericMap.replace(similarChar, '');
+            uppercaseMap = uppercaseMap.replace(similarChar, '');
+            lowercaseMap = lowercaseMap.replace(similarChar, '');
+            specialMap = specialMap.replace(similarChar, '');
+        }
+    }
+
+    let map = "";
+    if (withNumeric) map += numericMap;
+    if (withUppercase) map += uppercaseMap;
+    if (withLowercase) map += lowercaseMap;
+    if (withSpecialCharacters) map += specialMap;
+    if (qwertyCompliance) {
+        map = maps['qwertyCompliance'];
+        if (withoutSimilarCharacters) {
+            for (let i = 0; i < maps['similarCharacters'].length; i++) {
+                map = map.replace(maps['similarCharacters'].charAt(i), '');
+            }
         }
     }
 
@@ -49,24 +68,24 @@ function generate() {
     const minLowercase = withLowercase ? Math.max(1, Math.floor(passLength * 0.25)) : 0;
     const minSpecial = withSpecialCharacters ? Math.max(1, Math.floor(passLength * 0.25)) : 0;
 
-    // Ajouter les caractères minimum requis
+    // Ajouter les caractères minimum requis (utiliser les maps filtrées)
     for (let i = 0; i < minNumeric; i++) {
-        const char = getRandomChar(maps['numeric']);
+        const char = getRandomChar(numericMap);
         password += char;
         coloredPassword += `<span style="color: rgb(255 94 61);">${char}</span>`;
     }
     for (let i = 0; i < minUppercase; i++) {
-        const char = getRandomChar(maps['uppercase']);
+        const char = getRandomChar(uppercaseMap);
         password += char;
         coloredPassword += `<span style="color: #000000;">${char}</span>`;
     }
     for (let i = 0; i < minLowercase; i++) {
-        const char = getRandomChar(maps['lowercase']);
+        const char = getRandomChar(lowercaseMap);
         password += char;
         coloredPassword += `<span style="color: #000000;">${char}</span>`;
     }
     for (let i = 0; i < minSpecial; i++) {
-        const char = getRandomChar(maps['specialCharacters']);
+        const char = getRandomChar(specialMap);
         password += char;
         coloredPassword += `<span style="color: rgb(59 102 188);">${char}</span>`;
     }
